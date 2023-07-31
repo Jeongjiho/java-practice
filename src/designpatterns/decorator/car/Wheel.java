@@ -1,4 +1,4 @@
-package designpatterns.decorator;
+package designpatterns.decorator.car;
 
 public class Wheel extends CarDecorator {
     public Wheel(Car car) {

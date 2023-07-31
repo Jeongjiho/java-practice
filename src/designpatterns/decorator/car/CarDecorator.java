@@ -1,4 +1,4 @@
-package designpatterns.decorator;
+package designpatterns.decorator.car;
 
 public abstract class CarDecorator implements Car {
     protected Car car;
