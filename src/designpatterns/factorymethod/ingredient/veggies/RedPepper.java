@@ -1,4 +1,4 @@
-package designpatterns.factory.ingredient.veggies;
+package designpatterns.factorymethod.ingredient.veggies;
 
 public class RedPepper implements Veggies {
     @Override

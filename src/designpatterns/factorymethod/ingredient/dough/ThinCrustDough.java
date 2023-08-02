@@ -1,4 +1,4 @@
-package designpatterns.factory.ingredient.dough;
+package designpatterns.factorymethod.ingredient.dough;
 
 public class ThinCrustDough implements Dough {
     @Override

@@ -1,4 +1,4 @@
-package designpatterns.factory.ingredient.cheese;
+package designpatterns.factorymethod.ingredient.cheese;
 
 public class ReggianoCheese implements Cheese {
     @Override

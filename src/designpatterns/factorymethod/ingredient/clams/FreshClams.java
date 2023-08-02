@@ -1,4 +1,4 @@
-package designpatterns.factory.ingredient.clams;
+package designpatterns.factorymethod.ingredient.clams;
 
 public class FreshClams implements Clams {
     @Override

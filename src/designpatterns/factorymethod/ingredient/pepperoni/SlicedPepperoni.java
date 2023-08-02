@@ -1,4 +1,4 @@
-package designpatterns.factory.ingredient.pepperoni;
+package designpatterns.factorymethod.ingredient.pepperoni;
 
 public class SlicedPepperoni implements Pepperoni {
     @Override

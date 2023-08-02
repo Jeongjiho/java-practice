@@ -1,4 +1,4 @@
-package designpatterns.factory.ingredient.sauce;
+package designpatterns.factorymethod.ingredient.sauce;
 
 public class MarinaraSauce implements Sauce {
     @Override
