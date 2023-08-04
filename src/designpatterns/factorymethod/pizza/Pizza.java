@@ -1,41 +1,33 @@
 package designpatterns.factorymethod.pizza;
 
-import designpatterns.factorymethod.ingredient.cheese.Cheese;
-import designpatterns.factorymethod.ingredient.clams.Clams;
-import designpatterns.factorymethod.ingredient.dough.Dough;
-import designpatterns.factorymethod.ingredient.pepperoni.Pepperoni;
-import designpatterns.factorymethod.ingredient.sauce.Sauce;
-import designpatterns.factorymethod.ingredient.veggies.Veggies;
-
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public abstract class Pizza {
-
     protected String name;
+    protected String dough;
+    protected String sauce;
+    public ArrayList<String> toppings = new ArrayList<>();
 
-    protected Dough dough;
-    protected Sauce sauce;
-    protected Veggies[] veggies;
-    protected Cheese cheese;
-    protected Pepperoni pepperoni;
-    protected Clams clams;
-
-    public abstract void prepare();
+    public void prepare() {
+        System.out.println("prepare " + name);
+        System.out.println("Tossing dough...");
+        System.out.println("Adding sauce...");
+        System.out.println("Adding toppings: ");
+        for (String topping : toppings) {
+            System.out.println("   " + topping);
+        }
+    }
 
     public void bake() {
-        System.out.println("175도에서 25분 간 굽기");
+        System.out.println("Bake for 25 minutes at 350");
     }
 
     public void cut() {
-        System.out.println("피자를 사선으로 자르기");
+        System.out.println("Cut the pizza into diagonal slices");
     }
 
     public void box() {
-        System.out.println("상자에 피자 담기");
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        System.out.println("Place pizza in official PizzaStore box");
     }
 
     public String getName() {
@@ -44,15 +36,14 @@ public abstract class Pizza {
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                "name='" + name + '\'' +
-                ", dough=" + dough +
-                ", sauce=" + sauce +
-                ", veggies=" + Arrays.toString(veggies) +
-                ", cheese=" + cheese +
-                ", pepperoni=" + pepperoni +
-                ", clams=" + clams +
-                '}';
+        StringBuilder display = new StringBuilder();
+        display.append("---- ").append(name).append(" ----\n");
+        display.append(dough).append("\n");
+        display.append(sauce).append("\n");
+        for (String topping : toppings) {
+            display.append(topping).append("\n");
+        }
+        return display.toString();
     }
 
 }

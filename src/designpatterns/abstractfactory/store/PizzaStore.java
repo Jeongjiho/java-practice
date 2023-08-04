@@ -1,9 +1,8 @@
-package designpatterns.factorymethod.store;
+package designpatterns.abstractfactory.store;
 
-import designpatterns.factorymethod.pizza.Pizza;
+import designpatterns.abstractfactory.pizza.Pizza;
 
 public abstract class PizzaStore {
-
     protected abstract Pizza createPizza(String item);
 
     public Pizza orderPizza(String type) {
@@ -15,5 +14,4 @@ public abstract class PizzaStore {
         pizza.box();
         return pizza;
     }
-
 }
