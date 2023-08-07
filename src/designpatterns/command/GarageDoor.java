@@ -1,0 +1,23 @@
+package designpatterns.command;
+
+public class GarageDoor {
+    public void up() {
+        System.out.println("GarageDoor up!");
+    }
+
+    public void down() {
+        System.out.println("GarageDoor down!");
+    }
+
+    public void stop() {
+        System.out.println("GarageDoor stop!");
+    }
+
+    public void lightOn() {
+        System.out.println("GarageDoor lightOn!");
+    }
+
+    public void lightDown() {
+        System.out.println("GarageDoor lightDown!");
+    }
+}

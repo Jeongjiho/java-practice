@@ -1,4 +1,4 @@
-package scriptengine;
+package javabasic.scriptengine;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
