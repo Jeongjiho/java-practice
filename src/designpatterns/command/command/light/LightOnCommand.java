@@ -1,4 +1,7 @@
-package designpatterns.command;
+package designpatterns.command.command.light;
+
+import designpatterns.command.command.Command;
+import designpatterns.command.receiver.Light;
 
 public class LightOnCommand implements Command {
     Light light;
@@ -10,5 +13,10 @@ public class LightOnCommand implements Command {
     @Override
     public void execute() {
         light.on();
+    }
+
+    @Override
+    public void undo() {
+        light.off();
     }
 }
