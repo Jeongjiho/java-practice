@@ -1,4 +1,4 @@
-package designpatterns.facade;
+package designpatterns.facade.computer;
 
 public class Cpu {
 
