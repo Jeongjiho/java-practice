@@ -2,7 +2,7 @@ package designpatterns.iterator;
 
 import java.util.Iterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu {
 
     private static final int MAX_ITEMS = 5;
     private int numberOfItems = 0;
@@ -31,6 +31,7 @@ public class DinerMenu {
         return menuItems;
     }*/
 
+    @Override
     public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator(menuItems);
     }
