@@ -1,4 +1,4 @@
-package designpatterns.iterator;
+package designpatterns.iterator.refactoring;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,10 +19,6 @@ public class PancakeHouseMenu implements Menu {
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
         menuItems.add(new MenuItem(name, description, vegetarian, price));
-    }
-
-    public List<MenuItem> getMenuItems() {
-        return menuItems;
     }
 
     @Override

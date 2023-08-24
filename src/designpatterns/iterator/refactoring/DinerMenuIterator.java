@@ -1,4 +1,4 @@
-package designpatterns.iterator;
+package designpatterns.iterator.refactoring;
 
 import java.util.Iterator;
 

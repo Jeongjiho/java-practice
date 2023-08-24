@@ -1,4 +1,4 @@
-package designpatterns.iterator;
+package designpatterns.iterator.original;
 
 public class MenuItem {
 
