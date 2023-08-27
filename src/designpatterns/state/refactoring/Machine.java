@@ -1,15 +1,27 @@
 package designpatterns.state.refactoring;
 
 public class Machine {
-    private State soldOutState;
-    private State noQuarterState;
-    private State hasQuarterState;
-    private State soldState;
+    private final State soldOutState;
+    private final State noQuarterState;
+    private final State hasQuarterState;
+    private final State soldState;
 
     private State state;
     private int count = 0;
 
     public Machine(int numberBalls) {
+        soldOutState = new SoldOutState(this);
+        noQuarterState = new NoQuarterState(this);
+        hasQuarterState = new HasQuarterState(this);
+        soldState = new SoldState(this);
+
+        this.count = numberBalls;
+        if(this.count > 0) {
+            state = noQuarterState;
+        }
+        else {
+            state = soldOutState;
+        }
     }
 
     public void insertQuarter() {
@@ -22,6 +34,11 @@ public class Machine {
 
     public void turnCrank() {
         state.turnCrank();
+        state.dispense();
+    }
+
+    void setState(State state) {
+        this.state = state;
     }
 
     void releaseBall() {
@@ -30,4 +47,29 @@ public class Machine {
             count = count - 1;
         }
     }
+
+    public State getSoldOutState() {
+        return soldOutState;
+    }
+
+    public State getNoQuarterState() {
+        return noQuarterState;
+    }
+
+    public State getSoldState() {
+        return soldState;
+    }
+
+    public State getHasQuarterState() {
+        return hasQuarterState;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
 }

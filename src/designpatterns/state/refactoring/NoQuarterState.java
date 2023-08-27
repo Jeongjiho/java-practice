@@ -10,6 +10,7 @@ public class NoQuarterState implements State {
     @Override
     public void insertQuarter() {
         System.out.println("동전을 넣으셨습니다.");
+        machine.setState(machine.getHasQuarterState());
     }
 
     @Override

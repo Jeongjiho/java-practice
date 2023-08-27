@@ -1,4 +1,4 @@
-package designpatterns.proxy;
+package designpatterns.proxy.self;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package designpatterns.proxy;
+package designpatterns.proxy.self;
 
 public class RealImage implements Image {
     private final String fileName;

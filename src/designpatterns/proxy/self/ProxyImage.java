@@ -1,4 +1,4 @@
-package designpatterns.proxy;
+package designpatterns.proxy.self;
 
 public class ProxyImage implements Image {
     private RealImage realImage;
