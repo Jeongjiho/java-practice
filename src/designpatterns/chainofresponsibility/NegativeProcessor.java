@@ -1,10 +1,5 @@
 package designpatterns.chainofresponsibility;
 
-/**
- * @author jev
- * @version 1.0
- * @since 2023-09-08
- */
 public class NegativeProcessor implements Chain {
 
     private Chain nextInChain;
@@ -20,7 +15,7 @@ public class NegativeProcessor implements Chain {
             System.out.println("NegativeProcessor : " + request.number());
         }
         else {
-            
+            nextInChain.process(request);
         }
     }
 }
